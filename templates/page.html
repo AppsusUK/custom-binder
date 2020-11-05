@@ -1,3 +1,14 @@
 {% extends "templates/page.html" %}
 
 {% block logo_image %}"{{ EXTRA_STATIC_URL_PREFIX }}clogo.svg"{% endblock logo_image %}
+
+
+{% block logo %}
+<div class="container">
+  <div class="row">
+    <div id="logo-container">
+      <img id="logo" src={% block logo_image %}"{{ EXTRA_STATIC_URL_PREFIX }}clogo.svg"{% endblock logo_image %} width="240px"  />
+    </div>
+  </div>
+</div>
+{% endblock logo %}
