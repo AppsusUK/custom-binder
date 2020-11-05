@@ -2,7 +2,7 @@
 
 {% block head %}
 <meta id="base-url" data-url="{{base_url}}">
-<meta id="badge-base-url" data-url="{{EXTRA_STATIC_URL_PREFIX}}badge_logo.svg">
+<meta id="badge-base-url" data-url="{{base_url}}{{EXTRA_STATIC_URL_PREFIX}}badge_logo.svg">
 <script src="{{static_url("dist/bundle.js")}}"></script>
 
 
@@ -111,7 +111,7 @@
 
         <div class="badges row">
             <div class="dropdownmenu" id="toggle-badge-snippet">
-              <label>Copy the text below, then paste into your README to show a binder badge: <img id="badge" src="{{static_url("{{EXTRA_STATIC_URL_PREFIX}}badge_logo.svg")}}"></label>
+              <label>Copy the text below, then paste into your README to show a binder badge: <img id="badge" src=".{{EXTRA_STATIC_URL_PREFIX}}badge_logo.svg"></label>
               <a id="badge-link"></a>
               <a href="#" title="show badge snippets"><span id="badge-snippet-caret" class="glyphicon glyphicon-triangle-right"></span></a>
             </div>
